@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { buttonVariants } from "@/components/ui/button";
-import { HelixField } from "./helix-field";
 import { cn } from "@/lib/utils";
 
 const headline = ["Software", "solutions,", "quietly", "powerful."];
@@ -27,24 +26,20 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-6"
     >
+      {/* drifting aurora light (pure CSS, GPU-composited) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 overflow-hidden [mask-image:radial-gradient(ellipse_75%_70%_at_50%_42%,black,transparent)]"
+      >
+        <div className="animate-aurora-a absolute left-1/2 top-[30%] h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-brand/25 blur-[120px]" />
+        <div className="animate-aurora-b absolute left-[18%] top-[45%] h-[28rem] w-[28rem] rounded-full bg-brand/20 blur-[120px]" />
+        <div className="animate-aurora-c absolute right-[14%] top-[22%] h-[26rem] w-[26rem] rounded-full bg-cyan-300/20 blur-[110px] dark:bg-cyan-400/15" />
+      </div>
       {/* faint dotted grid for texture */}
       <motion.div
         style={{ y: gridY }}
         aria-hidden
-        className="bg-dotgrid pointer-events-none absolute inset-0 -top-24 opacity-50 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_40%,black,transparent)]"
-      />
-      {/* interactive 3D double helix — the brand, alive */}
-      <motion.div
-        style={{ y: gridY }}
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-70 [mask-image:linear-gradient(180deg,transparent,black_12%,black_88%,transparent)]"
-      >
-        <HelixField />
-      </motion.div>
-      {/* soft brand glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/3 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-brand/10 blur-[120px]"
+        className="bg-dotgrid pointer-events-none absolute inset-0 -top-24 opacity-60 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_40%,black,transparent)]"
       />
 
       <motion.div
