@@ -4,12 +4,15 @@ import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { buttonVariants } from "@/components/ui/button";
 import { Logo } from "./logo";
+import { ThemeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
 
 const links = [
   { label: "Platform", href: "#platform" },
   { label: "Work", href: "#process" },
   { label: "Results", href: "#metrics" },
+  { label: "Stories", href: "#testimonials" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export function Navbar() {
@@ -29,7 +32,7 @@ export function Navbar() {
         className={cn(
           "flex w-full max-w-5xl items-center justify-between rounded-full border px-4 py-2.5 transition-all duration-300",
           scrolled
-            ? "border-black/[0.07] bg-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl"
+            ? "border-border bg-background/80 shadow-[0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl"
             : "border-transparent bg-transparent",
         )}
       >
@@ -49,15 +52,18 @@ export function Navbar() {
           ))}
         </div>
 
-        <a
-          href="#contact"
-          className={cn(
-            buttonVariants({ size: "sm" }),
-            "rounded-full bg-brand px-4 text-brand-foreground hover:bg-brand/90",
-          )}
-        >
-          Book a call
-        </a>
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className={cn(
+              buttonVariants({ size: "sm" }),
+              "rounded-full bg-brand px-4 text-brand-foreground hover:bg-brand/90",
+            )}
+          >
+            Book a call
+          </a>
+        </div>
       </nav>
     </motion.header>
   );

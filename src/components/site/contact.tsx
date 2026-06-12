@@ -66,7 +66,7 @@ export function Contact() {
           </div>
 
           {/* form card */}
-          <div className="rounded-3xl bg-white p-6 shadow-xl md:p-8">
+          <div className="rounded-3xl bg-card p-6 shadow-xl md:p-8">
             <AnimatePresence mode="wait">
               {sent ? (
                 <motion.div

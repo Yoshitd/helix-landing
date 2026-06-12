@@ -31,7 +31,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-28 md:py-36">
+    <section id="faq" className="mx-auto max-w-3xl px-6 py-28 md:py-36">
       <Reveal className="text-center">
         <p className="text-sm font-medium text-brand">Questions</p>
         <h2 className="text-balance mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
@@ -40,9 +40,9 @@ export function FAQ() {
       </Reveal>
 
       <Reveal className="mt-12">
-        <Accordion multiple={false} className="border-t border-black/[0.08]">
+        <Accordion multiple={false} className="border-t border-border">
           {faqs.map((f) => (
-            <AccordionItem key={f.q} value={f.q} className="border-black/[0.08]">
+            <AccordionItem key={f.q} value={f.q} className="border-border">
               <AccordionTrigger className="py-5 text-base hover:no-underline">
                 {f.q}
               </AccordionTrigger>

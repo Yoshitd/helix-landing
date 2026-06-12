@@ -33,7 +33,7 @@ const quotes: Quote[] = [
 
 export function Testimonials() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-28 md:py-36">
+    <section id="testimonials" className="mx-auto max-w-6xl px-6 py-28 md:py-36">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-sm font-medium text-brand">In their words</p>
         <h2 className="text-balance mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
@@ -44,7 +44,7 @@ export function Testimonials() {
       <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">
         {quotes.map((q, i) => (
           <Reveal key={q.name} delay={i * 0.07} className="h-full">
-            <figure className="flex h-full flex-col justify-between rounded-3xl border border-black/[0.07] bg-white p-7">
+            <figure className="flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-7">
               <svg
                 viewBox="0 0 24 24"
                 className="h-7 w-7 text-brand/30"

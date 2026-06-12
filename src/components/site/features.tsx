@@ -60,7 +60,7 @@ export function Features() {
             delay={i * 0.07}
             className={cn("group h-full", f.span)}
           >
-            <div className="flex h-full flex-col rounded-3xl border border-black/[0.07] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_20px_50px_-20px_rgba(0,203,187,0.45)]">
+            <div className="flex h-full flex-col rounded-3xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_20px_50px_-20px_rgba(0,203,187,0.45)]">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-soft transition-colors group-hover:bg-brand group-hover:[&_svg]:text-brand-foreground">
                 {f.icon}
               </div>

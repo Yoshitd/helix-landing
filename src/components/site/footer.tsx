@@ -8,7 +8,7 @@ const cols = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-black/[0.06] bg-white px-6 py-16">
+    <footer className="border-t border-border bg-background px-6 py-16">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-10 md:grid-cols-5">
         <div className="col-span-2">
           <Logo className="text-lg" />
@@ -35,7 +35,7 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-3 border-t border-black/[0.06] pt-8 text-xs text-foreground/45 sm:flex-row">
+      <div className="mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-3 border-t border-border pt-8 text-xs text-foreground/45 sm:flex-row">
         <p>© {new Date().getFullYear()} Helix Labs. All rights reserved.</p>
         <p className="flex items-center gap-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" /> All systems operational

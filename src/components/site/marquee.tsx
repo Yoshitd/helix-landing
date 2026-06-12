@@ -30,7 +30,7 @@ const items: { label: string; Icon: IconType }[] = [
 
 export function Marquee() {
   return (
-    <section className="border-y border-black/[0.06] bg-white py-8">
+    <section className="border-y border-border bg-background py-8">
       <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
         The stack we ship on
       </p>
