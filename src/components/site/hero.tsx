@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { buttonVariants } from "@/components/ui/button";
+import { HelixField } from "./helix-field";
 import { cn } from "@/lib/utils";
 
 const headline = ["Software", "solutions,", "quietly", "powerful."];
@@ -26,11 +27,20 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-6"
     >
+      {/* faint dotted grid for texture */}
       <motion.div
         style={{ y: gridY }}
         aria-hidden
-        className="bg-dotgrid pointer-events-none absolute inset-0 -top-24 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_40%,black,transparent)]"
+        className="bg-dotgrid pointer-events-none absolute inset-0 -top-24 opacity-50 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_40%,black,transparent)]"
       />
+      {/* interactive 3D double helix — the brand, alive */}
+      <motion.div
+        style={{ y: gridY }}
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-70 [mask-image:linear-gradient(180deg,transparent,black_12%,black_88%,transparent)]"
+      >
+        <HelixField />
+      </motion.div>
       {/* soft brand glow */}
       <div
         aria-hidden
